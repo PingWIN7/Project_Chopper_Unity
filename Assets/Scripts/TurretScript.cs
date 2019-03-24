@@ -6,7 +6,8 @@ public class TurretScript : MonoBehaviour
 {
 
     public Transform player;
-    public float speed;
+    public float health = 100;
+    //public float speed;
 
     void FixedUpdate()
     {
@@ -14,7 +15,7 @@ public class TurretScript : MonoBehaviour
 
         transform.eulerAngles = new Vector3(0, 0, z);
 
-        GetComponent<Rigidbody2D>().AddForce(gameObject.transform.up * speed); //Use this line for soldiers
+        //GetComponent<Rigidbody2D>().AddForce(gameObject.transform.up * speed); //Use this line for soldiers
     }
 
     /*
