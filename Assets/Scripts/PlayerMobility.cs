@@ -6,6 +6,8 @@ public class PlayerMobility : MonoBehaviour
 {
 
     public float speed;
+    public float health = 2000;
+    public float fuel = 1000000;
 
     void FixedUpdate()
     {
@@ -19,6 +21,8 @@ public class PlayerMobility : MonoBehaviour
         float input = Input.GetAxis("Vertical");
         GetComponent<Rigidbody2D>().AddForce(gameObject.transform.up * speed * input);
 
+        input = Input.GetAxis("Horizontal");
+        GetComponent<Rigidbody2D>().AddForce(gameObject.transform.right * speed * input);
     }
 
     /*
