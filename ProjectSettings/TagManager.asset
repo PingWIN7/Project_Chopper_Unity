@@ -13,13 +13,13 @@ TagManager:
   - UI
   - 
   - 
-  - EnemyAir
-  - EnemyGround
-  - AlliedAir
-  - AlliedGround
-  - AlliedProjectiles
-  - EnemyProjectiles
-  - Explosion
+  - Air
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
