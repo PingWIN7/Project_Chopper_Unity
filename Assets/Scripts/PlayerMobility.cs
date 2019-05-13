@@ -6,18 +6,16 @@ public class PlayerMobility : MonoBehaviour
 {
 
     public float speed;
-    public float turnSpeed = 1.75f / 60.0f;
+    public float turnSpeed = 40;
     public float health = 2000;
     public float fuel = 1000000;
     private float currentValue = 0;
 
     void FixedUpdate()
     {
-        //var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //Quaternion rot = Quaternion.LookRotation(transform.position-mousePosition,Vector3.forward);
-
         float input = Input.GetAxis("Rotation");
 
+        //I need to find a way without needing to run 2 if statement here
         if (input > 0.05f)
         {
             input = 0.05f;
@@ -27,14 +25,7 @@ public class PlayerMobility : MonoBehaviour
         }
         
         currentValue += input;
-
-        //Quaternion rot = Quaternion.LookRotation(transform.position*input, Vector3.forward);
-
-        //Quaternion rot = Quaternion.Euler(input, input, input);
-
-        //transform.rotation = rot;
-        //transform.Rotate((currentValue * turnSpeed)%180 - 90, 0, 0);
-        //transform.eulerAngles = new Vector3(0, 0, transform.eulerAngles.z);
+        
         transform.eulerAngles = new Vector3(0, 0, currentValue * turnSpeed);
 
         GetComponent<Rigidbody2D>().angularVelocity = 0;
@@ -45,17 +36,5 @@ public class PlayerMobility : MonoBehaviour
         input = Input.GetAxis("Horizontal");
         GetComponent<Rigidbody2D>().AddForce(gameObject.transform.right * speed * input);
     }
-
-    /*
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }*/
+    
 }

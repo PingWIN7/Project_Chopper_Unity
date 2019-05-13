@@ -6,8 +6,15 @@ public class TurretScript : MonoBehaviour
 {
 
     public Transform player;
-    public float health = 100;
+    public WeaponScript weapon;
     //public float speed;
+
+    void Start()
+    {
+        var tmp = GameObject.Find("Player");
+        player = tmp.transform;
+        weapon = GetComponent<WeaponScript>();
+    }
 
     void FixedUpdate()
     {
