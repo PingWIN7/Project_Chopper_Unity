@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour
        rigid= GetComponent<Rigidbody2D>();
     }
 
-    protected void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         timer += Time.deltaTime;
         if (timer >= deathTimer)

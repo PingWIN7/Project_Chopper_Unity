@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &826861658023417344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2235366718373258902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2949c8aa4dfe448438d2ffdd2af47b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartingHealth: 30
+  MaxHealth: 30
+  CurrentHealth: 0
 --- !u!114 &7174575165999177828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17,21 +32,9 @@ MonoBehaviour:
   damage: 20
   explosion: {fileID: 4742372359660143559, guid: a2312207261f6634490eac1bcdce6565,
     type: 3}
---- !u!114 &826861658023417344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2235366718373258902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2949c8aa4dfe448438d2ffdd2af47b80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartingHealth: 30
-  MaxHealth: 30
-  CurrentHealth: 0
+  traveleffect: {fileID: 8372354006771689391, guid: 194dd97a8d6e1a544b49363efa15ab63,
+    type: 3}
+  effectSpawnTime: 0.1
 --- !u!1001 &3752542766710826928
 PrefabInstance:
   m_ObjectHideFlags: 0

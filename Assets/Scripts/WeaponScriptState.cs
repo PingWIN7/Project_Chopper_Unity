@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponScript : MonoBehaviour
+public class WeaponScriptState : MonoBehaviour
 {
     public GameObject weapon;
     public GameObject projectile;
@@ -10,7 +10,7 @@ public class WeaponScript : MonoBehaviour
     public float weaponTimer = 1;
     //public Transform target;
     private float currentTimer = 0;
-    public bool weaponEnabled = true;
+    public bool ready = false;
 
     void Start()
     {
@@ -19,19 +19,14 @@ public class WeaponScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (weaponEnabled)
-        {
-            currentTimer += Time.deltaTime;
-        }
+        currentTimer += Time.deltaTime;
         //Look for a target
 
         //Check if we can fire
-        if (weaponTimer < currentTimer)
-        {
-            //fire
-            fire();
-            //currentTimer = 0;
-        }
+         if (weaponTimer < currentTimer)
+         {
+            ready = true;
+         }
     }
 
     public void fire()
@@ -45,6 +40,7 @@ public class WeaponScript : MonoBehaviour
 
             //Instantiate(projectile, new Vector3(transform.position.x,transform.position.y+sprite.bounds.size.y/2,transform.position.z), GetComponent<Transform>().rotation);
             currentTimer = 0;
+            ready = false;
         }
     }
 }

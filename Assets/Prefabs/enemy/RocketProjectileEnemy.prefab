@@ -17,6 +17,9 @@ MonoBehaviour:
   damage: 20
   explosion: {fileID: 4742372359660143559, guid: a2312207261f6634490eac1bcdce6565,
     type: 3}
+  traveleffect: {fileID: 8372354006771689391, guid: 194dd97a8d6e1a544b49363efa15ab63,
+    type: 3}
+  effectSpawnTime: 0.1
 --- !u!114 &6284144365990057354
 MonoBehaviour:
   m_ObjectHideFlags: 0
