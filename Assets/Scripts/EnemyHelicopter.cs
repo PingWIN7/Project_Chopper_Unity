@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyHelicopter : MonoBehaviour
 {
-    public Transform player;
+    private Transform player;
     //public GameObject Projectile;
     public WeaponScriptState weaponScript;
     public float range = 25;
