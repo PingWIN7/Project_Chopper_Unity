@@ -8,10 +8,10 @@ public class Health : MonoBehaviour
     public float MaxHealth = 100;
     public float CurrentHealth;
 
-    private float maxColorTime = 0.125f;
-    private float timer;
+    protected float maxColorTime = 0.125f;
+    protected float timer;
 
-    private SpriteRenderer spriteRender;
+    protected SpriteRenderer spriteRender;
 
 
     // Start is called before the first frame update
@@ -21,7 +21,7 @@ public class Health : MonoBehaviour
         spriteRender = GetComponent<SpriteRenderer>();
     }
 
-    public void Update()
+    public virtual void Update()
     {
         timer += Time.deltaTime;
         if (timer < maxColorTime)
@@ -37,7 +37,7 @@ public class Health : MonoBehaviour
     }
 
 
-    public void GetHit(float damage)
+    public virtual void GetHit(float damage)
     {
         CurrentHealth -= damage;
         if (CurrentHealth <= 0)

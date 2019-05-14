@@ -43,4 +43,25 @@ public class WeaponScriptState : MonoBehaviour
             ready = false;
         }
     }
+
+    public void fireWithoutRestart()
+    {
+        if (currentTimer > weaponTimer)
+        {
+            /*var sr = GetComponent<SpriteRenderer>();
+            var sprite = sr.sprite;*/
+
+            Instantiate(projectile, transform.position, GetComponent<Transform>().rotation);
+
+            //Instantiate(projectile, new Vector3(transform.position.x,transform.position.y+sprite.bounds.size.y/2,transform.position.z), GetComponent<Transform>().rotation);
+            //currentTimer = 0;
+            //ready = false;
+        }
+    }
+
+    public void restartTimer()
+    {
+        currentTimer = 0;
+        ready = false;
+    }
 }

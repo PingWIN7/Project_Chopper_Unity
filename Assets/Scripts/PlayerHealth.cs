@@ -8,15 +8,26 @@ public class PlayerHealth : Health
     public Text hpText;
     public Image HpBar;
 
+    void Start()
+    {
+        CurrentHealth = StartingHealth;
+        HpBar.transform.localScale = new Vector3(HpBar.transform.localScale.x, 1 - (CurrentHealth / MaxHealth), HpBar.transform.localScale.z);
+    }
 
-    void Update()
+    public override void Update()
     {
         hpText.text = CurrentHealth+"";
         base.Update();
     }
-
-    void OnGui()
+    
+    public override void GetHit(float damage)
     {
-        GUI.Box(new Rect(0, 0, HpBar.mainTexture.height,100), HpBar.mainTexture);
+        CurrentHealth -= damage;
+        HpBar.transform.localScale = new Vector3(HpBar.transform.localScale.x, 1 - (CurrentHealth / MaxHealth), HpBar.transform.localScale.z);
+        if (CurrentHealth <= 0)
+        {
+            //Destroy(gameObject);
+        }
+        timer = 0;
     }
 }

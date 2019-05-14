@@ -196,5 +196,5 @@ MonoBehaviour:
   weapon: {fileID: 0}
   projectile: {fileID: 405244727512230123, guid: 1c5069bef94a2b64cb91ef38b74df3e5,
     type: 3}
-  weaponTimer: 1
+  weaponTimer: 2
   ready: 0
