@@ -8,12 +8,15 @@ public class Projectile : MonoBehaviour
     public float deathTimer = 5;
     public int damage = 5;
     protected float timer;
+    MissionStatus mstatus;
 
     protected Rigidbody2D rigid;
 
     void Start()
     {
-       rigid= GetComponent<Rigidbody2D>();
+        mstatus = GameObject.FindObjectOfType<MissionStatus>();
+        mstatus.projectiles++;
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     protected virtual void FixedUpdate()
@@ -31,6 +34,7 @@ public class Projectile : MonoBehaviour
 
     protected virtual void ReachedDeathTime()
     {
+        mstatus.projectiles--;
         Destroy(gameObject);
     }
 
@@ -48,6 +52,7 @@ public class Projectile : MonoBehaviour
         {
             hp.GetHit(damage);
             Destroy(gameObject);
+            mstatus.projectiles--;
         }
 
     }
