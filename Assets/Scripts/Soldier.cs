@@ -14,6 +14,7 @@ public class Soldier : MonoBehaviour
     private float timer = 0;
     private int currentShotNumber = 0;
     private Rigidbody2D rigid;
+    
 
 
     void Start()

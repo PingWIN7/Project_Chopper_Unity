@@ -43,6 +43,7 @@ public class WeaponScript : MonoBehaviour
 
             Instantiate(projectile, transform.position, GetComponent<Transform>().rotation);
 
+
             //Instantiate(projectile, new Vector3(transform.position.x,transform.position.y+sprite.bounds.size.y/2,transform.position.z), GetComponent<Transform>().rotation);
             currentTimer = 0;
         }

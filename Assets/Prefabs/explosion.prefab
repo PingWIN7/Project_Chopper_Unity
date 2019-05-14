@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosiveRange: 25
   explosiveTime: 0.5
-  damage: 10
+  damage: 30
 --- !u!95 &4132338198565108710
 Animator:
   serializedVersion: 3

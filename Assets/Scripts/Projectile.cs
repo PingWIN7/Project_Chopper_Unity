@@ -34,6 +34,11 @@ public class Projectile : MonoBehaviour
         Destroy(gameObject);
     }
 
+    public void SetDamage(int damage)
+    {
+        this.damage = damage;
+    }
+
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {

@@ -166,6 +166,7 @@ MonoBehaviour:
   player: {fileID: 0}
   weaponScript: {fileID: 0}
   speed: 10
+  range: 15
 --- !u!114 &8922853984530755285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
-  projectile: {fileID: 405244727512230123, guid: 1c5069bef94a2b64cb91ef38b74df3e5,
+  projectile: {fileID: 6623253320424245819, guid: 17de7cc5b6d8a5f4db723f302ce8c6b4,
     type: 3}
   weaponTimer: 2
   ready: 0

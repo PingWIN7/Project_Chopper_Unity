@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   deathTimer: 5
-  damage: 20
+  damage: 40
   explosion: {fileID: 4742372359660143559, guid: a2312207261f6634490eac1bcdce6565,
     type: 3}
   traveleffect: {fileID: 8372354006771689391, guid: 194dd97a8d6e1a544b49363efa15ab63,
@@ -52,12 +52,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 3104717287360086308, guid: 906ba79ffe50f6542b9b9470c3191d5c,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 01428c7a5f8752348809fb3a3f8488ea,
-        type: 3}
     - target: {fileID: 3104717287360086331, guid: 906ba79ffe50f6542b9b9470c3191d5c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -113,11 +107,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3104717287360086330, guid: 906ba79ffe50f6542b9b9470c3191d5c,
+    - target: {fileID: 3104717287360086308, guid: 906ba79ffe50f6542b9b9470c3191d5c,
         type: 3}
-      propertyPath: speed
-      value: 0.25
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 01428c7a5f8752348809fb3a3f8488ea,
+        type: 3}
     - target: {fileID: 7008872038765813432, guid: 906ba79ffe50f6542b9b9470c3191d5c,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -147,6 +142,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.3598822
+      objectReference: {fileID: 0}
+    - target: {fileID: 3104717287360086330, guid: 906ba79ffe50f6542b9b9470c3191d5c,
+        type: 3}
+      propertyPath: speed
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3104717287360086330, guid: 906ba79ffe50f6542b9b9470c3191d5c, type: 3}
